@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_padding_half"
+    android:theme="@style/AppTheme.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_padding_half"
+        android:fontFamily="@font/montserrat_bold"
+        android:includeFontPadding="false"
+        android:text="@string/title_references"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorFontBlack"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/loading_references"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        app:shimmer_auto_start="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <include layout="@layout/placeholder_card_faq" />
+
+            <include layout="@layout/placeholder_card_faq" />
+
+            <include layout="@layout/placeholder_card_faq" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_references"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="none"
+        android:visibility="gone"
+        tools:ignore="UnusedAttribute" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_references_detail"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="@dimen/activity_padding_half"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="@dimen/activity_padding_half"
+        android:text="@string/button_read_more"
+        android:visibility="gone" />
+
+</LinearLayout>

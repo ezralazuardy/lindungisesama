@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lindungisesama">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".di.BaseApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.splashscreen.SplashScreenActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SplashScreenActivity"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.MainActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.guides.GuideListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.GuideListActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.mythbusters.MythbusterListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.MythbusterListActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.guides.GuideDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.GuideDetailActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.mythbusters.MythbusterDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.MythbusterDetailActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.preventions.PreventionDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.PreventionDetailActivity"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.WebViewActivity"
+            tools:ignore="LockedOrientationActivity" />
+    </application>
+
+</manifest>

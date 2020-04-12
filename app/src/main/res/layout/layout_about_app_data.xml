@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_padding_half"
+    android:theme="@style/AppTheme.MainActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_padding_half">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:includeFontPadding="false"
+                android:text="Tentang Data Aplikasi"
+                android:textColor="@color/colorFontBlack"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/activity_padding"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding"
+                android:fontFamily="@font/montserrat_bold"
+                android:includeFontPadding="false"
+                android:text="Data berubah dengan cepat"
+                android:textColor="@color/colorFontBlack"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat"
+                android:includeFontPadding="false"
+                android:text="Data ini berubah dengan cepat dan mungkin tidak mencerminkan beberapa kasus yang masih dilaporkan."
+                android:textAlignment="textStart"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding"
+                android:fontFamily="@font/montserrat_bold"
+                android:includeFontPadding="false"
+                android:text="Data hanya mencakup kasus positif"
+                android:textColor="@color/colorFontBlack"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat"
+                android:includeFontPadding="false"
+                android:text="Data kasus hanya mencakup orang yang sudah diuji dan dinyatakan positif. Ketersediaan dan aturan pengujian berbeda-beda di setiap negara. Beberapa area mungkin tidak memiliki data karena belum memublikasikan datanya atau belum melakukannya baru-baru ini."
+                android:textAlignment="textStart"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding"
+                android:fontFamily="@font/montserrat_bold"
+                android:includeFontPadding="false"
+                android:text="Mengapa saya melihat data\nyang berbeda dari berbagai sumber?"
+                android:textColor="@color/colorFontBlack"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat"
+                android:includeFontPadding="false"
+                android:text="Ada berbagai sumber yang melacak dan mengumpulkan data virus Corona. Sumber-sumber tersebut diperbarui pada waktu yang berbeda dan mungkin memiliki cara yang berbeda dalam mengumpulkan data."
+                android:textAlignment="textStart"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

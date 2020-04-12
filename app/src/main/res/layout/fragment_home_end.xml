@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/motion_scene_fragment_home"
+    tools:context=".ui.main.fragment.home.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="140dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:includeFontPadding="false"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:text="@string/title_primary_home"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorFontWhite"
+        android:textSize="@dimen/title_primary_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/app_bar"
+        app:layout_constraintEnd_toEndOf="@id/app_bar"
+        app:layout_constraintStart_toStartOf="@id/app_bar"
+        app:layout_constraintTop_toTopOf="@id/app_bar"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/quote_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="140dp"
+        android:alpha="0"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat"
+        android:includeFontPadding="false"
+        android:text="@string/quote_primary_home"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorFontWhite"
+        android:textSize="@dimen/quote_primary_size"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@id/title_text"
+        app:layout_constraintEnd_toEndOf="@id/app_bar"
+        app:layout_constraintStart_toStartOf="@id/app_bar"
+        app:layout_constraintTop_toBottomOf="@id/title_text"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageView
+        android:id="@+id/image_header"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:alpha="0"
+        android:contentDescription="@null"
+        android:elevation="8dp"
+        android:paddingEnd="-28dp"
+        android:scaleX="0.2"
+        android:scaleY="0.2"
+        android:src="@drawable/img_header_home"
+        app:layout_constraintBottom_toTopOf="@id/title_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="RtlSymmetry,UnusedAttribute" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:animateLayoutChanges="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

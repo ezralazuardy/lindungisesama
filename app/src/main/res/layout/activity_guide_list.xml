@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/motion_scene_activity_guide_list"
+    tools:context=".ui.guides.GuideListActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:elevation="10dp"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back_white"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginBottom="68dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:includeFontPadding="false"
+        android:text="@string/title_guides"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorFontWhite"
+        android:textSize="@dimen/title_primary_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/app_bar"
+        app:layout_constraintStart_toStartOf="@id/app_bar"
+        app:layout_constraintTop_toTopOf="@id/app_bar"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/quote_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="38dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat"
+        android:includeFontPadding="false"
+        android:text="@string/quote_primary_guides"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorFontWhite"
+        android:textSize="@dimen/quote_primary_size"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@id/app_bar"
+        app:layout_constraintStart_toStartOf="@id/app_bar"
+        app:layout_constraintTop_toBottomOf="@id/title_text"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageView
+        android:id="@+id/img_header"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="end"
+        android:layout_marginStart="@dimen/activity_padding"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@null"
+        android:elevation="8dp"
+        android:src="@drawable/img_header_guides"
+        app:layout_constraintBottom_toBottomOf="@id/app_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry,UnusedAttribute" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:animateLayoutChanges="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_padding_half">
+
+            <include layout="@layout/layout_guides_list" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_padding">16dp</dimen>
+    <dimen name="activity_padding_half">8dp</dimen>
+    <dimen name="title_primary_size">24sp</dimen>
+    <dimen name="quote_primary_size">14sp</dimen>
+</resources>

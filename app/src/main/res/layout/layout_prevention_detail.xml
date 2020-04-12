@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_timestamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_padding_half"
+        android:layout_marginTop="@dimen/activity_padding"
+        android:layout_marginEnd="@dimen/activity_padding_half"
+        android:layout_marginBottom="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/montserrat_bold"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorFontBlack"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_margin="@dimen/activity_padding_half"
+        android:background="@android:color/darker_gray"
+        android:visibility="gone" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/button_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_padding_half"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_padding">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="false"
+                android:contentDescription="@null"
+                android:focusable="false"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_web_blue" />
+
+            <TextView
+                android:id="@+id/text_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:layout_marginStart="33dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+        </FrameLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

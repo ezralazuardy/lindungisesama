@@ -1,0 +1,61 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.SplashScreenActivity" parent="AppTheme.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorBackgroundLight</item>
+        <item name="android:windowBackground">@drawable/background_splash_screen</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="AppTheme.MainActivity" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@color/colorBackgroundLight</item>
+    </style>
+
+    <style name="AppTheme.WebViewActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorBackgroundLight</item>
+        <item name="colorPrimaryDark">@color/colorBackgroundLight</item>
+        <item name="colorAccent">@color/finestBlack</item>
+        <item name="android:textColorPrimary">@color/finestBlack</item>
+        <item name="android:textColorSecondary">@color/finestSilver</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="AppTheme.GuideListActivity" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@color/colorBackgroundLight</item>
+    </style>
+
+    <style name="AppTheme.GuideDetailActivity" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@color/colorBackgroundLight</item>
+    </style>
+
+    <style name="AppTheme.MythbusterListActivity" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@color/colorBackgroundLight</item>
+    </style>
+
+    <style name="AppTheme.MythbusterDetailActivity" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@color/colorBackgroundLight</item>
+    </style>
+
+    <style name="AppTheme.PreventionDetailActivity" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@color/colorBackgroundLight</item>
+    </style>
+
+    <style name="BottomNavigationTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/darker_gray</item>
+        <item name="android:elevation" tools:ignore="NewApi">8dp</item>
+    </style>
+
+</resources>

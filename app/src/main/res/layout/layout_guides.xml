@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_padding_half"
+    android:theme="@style/AppTheme.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_padding_half"
+        android:animateLayoutChanges="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:fontFamily="@font/montserrat_bold"
+            android:includeFontPadding="false"
+            android:text="@string/title_guides"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorFontBlack"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/button_guides_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_arrow_forward_black" />
+
+    </FrameLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/guides_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        app:shimmer_auto_start="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <include layout="@layout/placeholder_loading_card_guides" />
+
+            <include layout="@layout/placeholder_loading_card_guides" />
+
+            <include layout="@layout/placeholder_loading_card_guides" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/guides_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="gone"
+        tools:ignore="UnusedAttribute" />
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme.MainActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_padding_half">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/activity_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/ic_launcher_round" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/activity_padding"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:includeFontPadding="false"
+                        android:text="@string/app_name"
+                        android:textColor="@color/colorFontBlack"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/text_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/activity_padding"
+                android:paddingEnd="@dimen/activity_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:includeFontPadding="false"
+                    android:text="Melihat semakin parahnya pandemik COVID-19 di Indonesia, membuat salah satu programmer tanah air ingin menciptakan sebuah aplikasi yang dapat menjadi sumber informasi terpercaya seputar COVID-19 di Indonesia."
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/montserrat"
+                    android:includeFontPadding="false"
+                    android:text="Maka inisiatif pembuatan aplikasi ini pun muncul sebagai bentuk keprihatinan akan musibah yang sedang menimpa dunia saat ini."
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_official_web"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/activity_padding_half"
+                android:text="@string/button_official_web"
+                app:icon="@drawable/ic_web_blue" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

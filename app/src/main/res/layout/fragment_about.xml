@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.main.fragment.about.AboutFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="140dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:includeFontPadding="false"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:text="@string/title_about"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorFontWhite"
+        android:textSize="@dimen/title_primary_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/app_bar"
+        app:layout_constraintEnd_toEndOf="@id/app_bar"
+        app:layout_constraintStart_toStartOf="@id/app_bar"
+        app:layout_constraintTop_toTopOf="@id/app_bar"
+        tools:ignore="UnusedAttribute" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:animateLayoutChanges="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_padding_half">
+
+            <include layout="@layout/layout_about_app" />
+
+            <include layout="@layout/layout_important_links" />
+
+            <include layout="@layout/layout_references" />
+
+            <include layout="@layout/layout_about_app_data" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

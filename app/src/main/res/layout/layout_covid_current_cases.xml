@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_padding_half"
+        android:fontFamily="@font/montserrat_bold"
+        android:includeFontPadding="false"
+        android:text="@string/title_current_cases"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorFontBlack"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:stretchColumns="0,1">
+
+        <TableRow>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_padding_half"
+                android:animateLayoutChanges="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorOrangeLight"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_padding">
+
+                    <TextView
+                        android:id="@+id/txt_covid_current_confirmed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/colorFontWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <com.github.ybq.android.spinkit.SpinKitView
+                        android:id="@+id/loading_covid_current_confirmed"
+                        style="@style/SpinKitView.Small.ThreeBounce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:SpinKit_Color="@android:color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_padding"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:text="@string/card_confirmed_title"
+                        android:textColor="@color/colorFontWhite"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_padding_half"
+                android:animateLayoutChanges="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorYellowLight"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_padding">
+
+                    <TextView
+                        android:id="@+id/txt_covid_current_recovery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/colorFontWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <com.github.ybq.android.spinkit.SpinKitView
+                        android:id="@+id/loading_covid_current_recovery"
+                        style="@style/SpinKitView.Small.ThreeBounce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:SpinKit_Color="@android:color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_padding"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:text="@string/card_recovery_title"
+                        android:textColor="@color/colorFontWhite"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </TableRow>
+
+        <TableRow>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_padding_half"
+                android:animateLayoutChanges="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGreenLight"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_padding">
+
+                    <TextView
+                        android:id="@+id/txt_covid_current_recovered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/colorFontWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <com.github.ybq.android.spinkit.SpinKitView
+                        android:id="@+id/loading_covid_current_recovered"
+                        style="@style/SpinKitView.Small.ThreeBounce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:SpinKit_Color="@android:color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_padding"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:text="@string/card_recovered_title"
+                        android:textColor="@color/colorFontWhite"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_padding_half"
+                android:animateLayoutChanges="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorRedLight"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_padding">
+
+                    <TextView
+                        android:id="@+id/txt_covid_current_death"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/colorFontWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <com.github.ybq.android.spinkit.SpinKitView
+                        android:id="@+id/loading_covid_current_death"
+                        style="@style/SpinKitView.Small.ThreeBounce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:SpinKit_Color="@android:color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_padding"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:text="@string/card_death_title"
+                        android:textColor="@color/colorFontWhite"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/txt_covid_current_timestamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:includeFontPadding="false"
+        android:padding="@dimen/activity_padding_half"
+        android:text="@string/text_current_cases_refreshed_time"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorFontBlack"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="@dimen/activity_padding"
+    android:theme="@style/AppTheme.MainActivity">
+
+    <TextView
+        android:id="@+id/text_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center"
+        android:ellipsize="end"
+        android:fontFamily="@font/montserrat"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp" />
+
+</FrameLayout>
