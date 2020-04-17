@@ -8,7 +8,7 @@ import retrofit2.http.Path
 
 interface CountryDAO {
 
-	@GET("/countries/{country_id}")
+	@GET("/v2/countries/{country_id}")
 	fun getCurrentCase(
 		@Path("country_id") countryCode: Int = INDONESIA_COUNTRY_ID
 	): Call<CurrentCountryCase>
